@@ -11,13 +11,7 @@ const Details = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
-  const {
-    getCharacterFromCache,
-    updateCache,
-    getStarshipsFromCache,
-    getPlanetsFromCache,
-    getVehiclesFromCache,
-  } = useCharacterCache();
+  const { getCharacterFromCache, updateCache } = useCharacterCache();
 
   const replaceURIs = async (characters) => {
     try {
